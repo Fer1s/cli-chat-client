@@ -4,7 +4,7 @@ simple client for [cli-chat-server](https://github.com/Ferizzz/cli-chat-server).
 
 Screenshot:
 
-<img src="https://i.imgur.com/uz7CeNm.png" alt="screenshot" style="width: 100%; border: 1px solid #424242;"/>
+<img src="https://i.imgur.com/uz7CeNm.png" alt="screenshot" style="width: 100%; border-radius: 5px;"/>
 
 ## Install
 
