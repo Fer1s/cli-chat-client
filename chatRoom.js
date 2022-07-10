@@ -16,6 +16,7 @@ module.exports = ({ screen, socket, username, room }) => {
 
 
 
+
    const chatBox = blessed.box({
       label: ` Chat | Room: ${room} `,
       width: '100%-20',
@@ -69,6 +70,7 @@ module.exports = ({ screen, socket, username, room }) => {
 
 
 
+
    let usersCount = 0
    let usersList
    socket.on('roomData', ({ users }) => {
@@ -100,6 +102,13 @@ module.exports = ({ screen, socket, username, room }) => {
       chatLog.log(`-> ${chalk.yellow('SYSTEM')}: There are ${rooms} rooms, ${users} users and ${usersInRoom} users in the room.`)
    })
 
+
+
+
+
+
+
+
    input.key('enter', () => {
       const text = input.getValue()
       input.clearValue()
@@ -130,9 +139,9 @@ module.exports = ({ screen, socket, username, room }) => {
                chatLog.log(`-> ${chalk.yellow('SYSTEM')}: Server address is ${chalk.bold.yellow(socket.io.uri)}`)
             }
          } else {
-            if(text.length > 400) {
-               chatLog.log(`-> ${chalk.red("Error: Message is too long.")}`)
-            }else{
+            if (text.length > 400) {
+               chatLog.log(`-> ${chalk.red('Error: Message is too long.')}`)
+            } else {
                socket.emit('sendMessage', {
                   text: text,
                })
@@ -142,7 +151,6 @@ module.exports = ({ screen, socket, username, room }) => {
       input.focus()
    })
 
-   // scroll chat on arrow down
    input.key('up', () => {
       chatLog.scroll(-3)
       screen.render()
@@ -151,6 +159,12 @@ module.exports = ({ screen, socket, username, room }) => {
       chatLog.scroll(3)
       screen.render()
    })
+
+
+
+
+
+   
 
    screen.append(chatBox)
    screen.append(usersBox)
