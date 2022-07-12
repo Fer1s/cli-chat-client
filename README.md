@@ -4,7 +4,7 @@ simple client for [cli-chat-server](https://github.com/Ferizzz/cli-chat-server).
 
 Screenshot:
 
-<img src="https://i.imgur.com/uz7CeNm.png" alt="screenshot" style="width: 100%; border-radius: 5px;"/>
+<img src="https://i.ibb.co/vHBd3Gk/screenshot.png" alt="screenshot" style="width: 100%;"/>
 
 ## Install
 
@@ -19,7 +19,9 @@ $ npm install
 ```
 $ node .
 ```
+
 or
+
 ```
 $ npm start
 ```
